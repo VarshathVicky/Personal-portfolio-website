@@ -1,0 +1,474 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+:root {
+    --bg-color: #191f36;
+    --snd-bf-color: #262B40;
+    --text-color: #fff;
+    --main-color: #5982F4;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 9%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar a {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--text-color);
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    display: none;
+}
+
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-content h3 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.home-img img {
+    width: 25vw;
+}
+
+.home-content p {
+    font-size: 1.6rem;
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 2rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    margin: 3rem 1.5rem 3rem 0;
+    transition: .5s ease;
+}
+
+.social-media a:hover {
+    background: var(--main-color);
+    color: var(--snd-bf-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: var(--main-color);
+    border-radius: 4rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: .1rem;
+    font-weight: 600;
+    transition: .5s ease;
+}
+
+.btn:hover {
+    box-shadow: none;
+}
+
+.about {
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  
+    background: var(--snd-bf-color);
+}
+
+.about-img img {
+    width:35vw;
+}
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+} 
+.portfolio {
+    text-align: center;
+}
+
+.portfolio .heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.heading span {
+    color: var(--main-color);
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.portfolio-box {
+    background: var(--snd-bf-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem var(--snd-bf-color);
+    transition: .5s;
+}
+
+.portfolio-box:hover {
+    transform: scale(1.03);
+}
+
+.portfolio-box img {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio-box:hover img {
+    opacity: .3;
+}
+
+.portfolio-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    transition: .5s ease;
+    opacity: 0;
+}
+
+.portfolio-box:hover .portfolio-layer {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+}
+
+.portfolio-layer h4 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: .5rem;
+}
+
+.portfolio-layer p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.portfolio-layer i {
+    font-size: 2rem;
+    color: var(--main-color);
+}
+
+.contact {
+    text-align: center;
+}
+
+.contact .heading {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.input-box {
+    display: flex;
+    gap: 2rem;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    background: var(--snd-bf-color);
+    color: var(--text-color);
+}
+
+textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    border-radius: 1rem;
+    background: var(--snd-bf-color);
+    color: var(--text-color);
+    margin: 2rem 0;
+    resize: none;
+}
+
+.footer {
+    text-align: center;
+    padding: 3rem 9% 1.5rem;
+    background: var(--snd-bf-color);
+}
+
+.footer-text p {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.footer .footer-iconTop {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background: transparent;
+    border: .2rem solid var(--main-color);
+    border-radius: 2rem;
+    font-size: 2rem;
+    color: var(--text-color);
+    transition: .5s ease;
+}
+
+.footer .footer-iconTop:hover {
+    background: var(--main-color);
+    color: var(--snd-bf-color);
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+
+
+
+ 
+.services {
+    background: var(--bg-color);
+    padding: 10rem 9% 2rem;
+}
+
+.services h2 {
+    margin-bottom: 4rem;
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    gap: 2.5rem;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--snd-bf-color);
+    padding: 2rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--main-color);
+    transition: transform 0.3s;
+}
+
+.service i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.service h3 {
+    font-size: 2rem;
+    margin-top: 0.5rem;
+}
+
+.service p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+
+.foot{
+    color:aqua;
+    cursor: default;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    section {
+        padding: 10rem 5%;
+    }
+}
+
+@media (max-width: 768px) {
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        height: 30vh;
+        width: 100%;
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 0;
+        transition: all .3s ease;
+        z-index: 1000;
+    }
+
+    #menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar a {
+        font-size: 1.5rem;
+        margin: 0.5rem 0;
+    }
+
+    .navbar.active {
+        left: 0;
+    }
+
+    .home {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-img img {
+        width: 40rem;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+    .about-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .contact .input-box {
+        flex-direction: column;
+    }
+    
+        .services-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+    
+        .service {
+            text-align: center;
+            padding: 2rem;
+            background: var(--snd-bf-color);
+            border-radius: 1rem;
+            box-shadow: 0 0 1rem rgba(0,0,0,0.3);
+        }
+    
+        .service i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+        }
+    
+        .service h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+    
+        .service p {
+            font-size: 1.4rem;
+            margin: 0;
+            line-height: 1.5;
+        }
+    
+    
+}
